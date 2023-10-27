@@ -271,7 +271,7 @@ def main():
                 url = cnc.split()[1]
                 time = cnc.split()[2]
                 threads = cnc.split()[3]
-                os.system(f'node load.js {url} {time} 32 10')
+                os.system(f'node load.js {url} {time} 64 10')
             except IndexError:
                 print('Usage: load <url> <time> ')
                 print('Example: load http://example-cloud.com 60')
