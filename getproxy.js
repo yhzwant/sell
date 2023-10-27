@@ -2,7 +2,7 @@ const axios = require('axios');
 const fs = require('fs');
 
 const proxyURLs = [
-  'http://212.87.213.146:3000/privateproxy.txt',
+  'https://proxyspace.pro/http.txt',
   //'http://212.87.213.146:3000/privateproxy2.txt',
   //'http://212.87.213.146:3000/privateproxy3.txt',
   //'http://212.87.213.146:3000/privateproxy4.txt'
