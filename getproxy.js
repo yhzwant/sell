@@ -3,7 +3,8 @@ const fs = require('fs');
 
 const proxyURLs = [
   'https://api.proxyscrape.com/?request=displayproxies&proxytype=http',
-  'https://proxyspace.pro/http.txt'
+  'https://proxyspace.pro/http.txt',
+  'https://raw.githubusercontent.com/monosans/proxy-list/main/proxies/http.txt',
   // Add more URLs here as needed
 ];
 
