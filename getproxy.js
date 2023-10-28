@@ -5,6 +5,7 @@ const proxyURLs = [
   'https://api.proxyscrape.com/?request=displayproxies&proxytype=http',
   'https://proxyspace.pro/http.txt',
   'https://raw.githubusercontent.com/monosans/proxy-list/main/proxies/http.txt',
+  'https://api.openproxylist.xyz/http.txt',
   // Add more URLs here as needed
 ];
 
