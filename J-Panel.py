@@ -136,7 +136,7 @@ def tools():
                                 \x1b[38;2;0;212;14m║     \x1b[38;2;0;255;255mTools     \x1b[38;2;0;212;14m║
                 \x1b[38;2;0;212;14m╔═══════════════╩══════╦════════╩═══════════════╗
                 \x1b[38;2;0;212;14m║  \x1b[38;2;0;255;255mgeoip               \x1b[38;2;0;212;14m║  \x1b[38;2;0;255;255mreverse-dns           \x1b[38;2;0;212;14m║
-                \x1b[38;2;0;212;14m║  \x1b[38;2;0;255;255mreverseip           \x1b[38;2;0;212;14m║  \x1b[38;2;0;255;255m<empty>               \x1b[38;2;0;212;14m║  
+                \x1b[38;2;0;212;14m║  \x1b[38;2;0;255;255mreverseip           \x1b[38;2;0;212;14m║  \x1b[38;2;0;255;255mget-proxy             \x1b[38;2;0;212;14m║  
                 \x1b[38;2;0;212;14m║  \x1b[38;2;0;255;255msubnet-lookup       \x1b[38;2;0;212;14m║  \x1b[38;2;0;255;255m<empty>               \x1b[38;2;0;212;14m║
                 \x1b[38;2;0;212;14m║  \x1b[38;2;0;255;255masn-lookup          \x1b[38;2;0;212;14m║  \x1b[38;2;0;255;255m<empty>               \x1b[38;2;0;212;14m║
                 \x1b[38;2;0;212;14m║  \x1b[38;2;0;255;255mdns-lookup          \x1b[38;2;0;212;14m║  \x1b[38;2;0;255;255m<empty>               \x1b[38;2;0;212;14m║
@@ -286,15 +286,11 @@ def main():
                 print('Usage: mix <url> <time> <thread>')
                 print('Example: mix http://example.org 60 900')
 
-        elif "http-raw" in cnc:
+        elif "get-proxy" in cnc:
             try:
-                url = cnc.split()[1]
-                time = cnc.split()[2]
-                method = cnc.split()[3]
-                os.system(f'node HTTP-RAW.js {url} {time} {method}')
+                os.system(f'node getproxy.js')
             except IndexError:
-                print('Usage: https-raw <url> <time> <GET/POST/HEAD>')
-                print('Example: http-raw http://example.com 20 POST')
+                print('proxy recieved!!!')
 
         elif "cloudflare-uam" in cnc:
             try:
