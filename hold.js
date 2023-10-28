@@ -20,7 +20,6 @@ const customCommand = process.argv[2];
 // Check if a custom command was provided
 if (!customCommand) {
   console.error('Please provide a custom command.');
-  console.error('example: node hold.js ur command here');
   process.exit(1);
 }
 
