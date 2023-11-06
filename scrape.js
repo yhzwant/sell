@@ -4,8 +4,10 @@ const fs = require('fs').promises;
 
 // List of URLs to scrape proxies from
 const proxyUrls = [
-  'http://example.com/proxies1',
-  'http://example.com/proxies2'
+  'https://api.proxyscrape.com/?request=displayproxies&proxytype=http',
+  'https://proxyspace.pro/http.txt',
+  'https://raw.githubusercontent.com/monosans/proxy-list/main/proxies/http.txt',
+  'https://api.openproxylist.xyz/http.txt',
   // Add more URLs as needed
 ];
 
